@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 자식 요소를 사용하는 flexbox 사용예시 */
+        .info{
+            padding: 30px;
+
+
+        }
+        .parent{
+            border: 5px solid red;
+            /* parent 클래스를 flexbox 형식으로 표현하게됨 */
+            display: flex;
+        }
+        .parent div{
+            height: 200px;
+            width: 200px;
+            color: #fff;
+            text-align: center;
+            line-height: 200px;
+            font-size: 30px;
+        }
+        .child{
+            background-color: red;
+            /* 전체(1+1+1)=3의 1/3을 차지함 */
+            /* flex: 3; 이라면 전체 (3+1+1=5) 중에서 3을 차지하게 함.
+            즉, 전체의 3/5를 차지함3 */
+            flex: 1;
+        }
+        .child2{
+            background-color: blue;
+            /* 전체(1+1+1)=3의 1/3을 차지함 */
+            
+            flex: 1;
+        }
+        .child3{
+            background-color: green;
+              /* 전체(1+1+1)=3의 1/3을 차지함 */
+            flex: 1;
+
+        }
+    </style>
+</head>
+<body>
+    <div class="info">
+        <h2>자식 요소에 사용하는 속성</h2>
+        <ul>
+            <li>flex : 숫자는 flex box의 자식 요소 너비를 상대적으로 설정하는 것을 의미한다
+            </li>
+        </ul>
+    </div>
+
+
+    <div class="parent">
+        <div class=""
+    </div>
+</body>
+</html>

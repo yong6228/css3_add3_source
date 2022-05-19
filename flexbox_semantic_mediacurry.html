@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flexbox 주요 예시 2</title>
+    <style>
+        /* 시멘틱 태그 반응형 레이아웃 flexbox 구현 예시
+        전체 화면서에서 폭을 모바일 화면 크기로 줄이면. 미디어 쿼리 CSS표현이
+        반응형 웹으로 표현됨  */
+        .container{
+            width: 1200px;
+            margin: auto;
+            border: 1px solid red;
+            text-align: center;
+            display: flex;
+            flex-wrap: wrap;/* flexbox 너비가 컨텐츠보다 작아졌을 때 줄바꿈 표현함 */
+            
+        }
+        header{
+            background-color: tomato;
+            /* header 영역에 대해 1(100%) 전체 너비 적용함 */
+            flex: 1;
+            padding: 1em;
+        }
+        section{
+            /* 자식 요소 article 가로 배치 표현함 */
+            display: flex;
+
+        }
+        section.article{
+            padding: 15em 1em;
+        }
+        article.main{
+            background-color: gray;
+            /* article 태그 전체의 4/6 를 가지게 함 */
+            flex: 4;
+            /* 웹 구현 시 2번째 순서로 표현됨 */
+            order: 2;
+        }
+        article.left{
+            background-color: yellow;
+            /* article 태그 전체의 1/6 너비를 가짐 */
+            flex: 1;
+             /* 웹 구현 시 1번째 순서로 표현됨 */
+            order : 1;
+
+        }
+        article.right{
+            background-color: green;
+            /* article 태그 전체의 1/6 너비를 가짐 */
+            flex: 1;
+            order: 3; /* 웹 구현 시 3번째 순서로 표현됨 */
+        }
+        footer{
+            background-color: aqua;
+            
+            flex: 1;  /* footer 영역에 대해 1(100%)  전처 너비 적용함 */
+            padding: 1em;
+        }
+        @media(max-width:768px){
+            /* 모바일에서는 모바일 화면 기준으로 100% 사이즈 적용함 */
+            .container{ width: 100%;}
+            section{
+                /* 반응형 웹  flex 표현은 세로형 방향으로 함 */
+                flex-direction: column;
+            }
+            section.article{ padding: 1em;}
+            article.main{
+                /* 반응혁 웹 표현 시 article 태그 지식 요소 중에서 첫번째 순서로 적용함 */
+                order: 1;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>Header</header>
+        <section>
+            <article class="main">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati facilis nisi atque esse dolorem ab accusamus voluptatum nulla nihil repellendus, itaque veritatis. Totam, nesciunt nemo reprehenderit fuga sint quidem aspernatur. </p>
+            </article>
+            <article class="left">Aside1</article>
+            <article class="right">Aside2</article>
+        </section>
+        <footer>Footer</footer>
+    </div>
+</body>
+</html>

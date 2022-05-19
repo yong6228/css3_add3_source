@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>flexbox</title>
+    <style>
+        body{
+            margin: 0;
+            height: 100vh;  /* vh=viewport height */
+        }
+        h1,h2,h3,h4,h5,h6{
+            margin: 0;
+
+        }
+        header{
+            display: flex;
+        }
+        .logo, .search, .gnb{
+            padding: 1em;
+        }
+        .logo{
+            background-color:  greenyellow;
+            /* div.logo 영역에 대해 1(100%) 전체너비 적용 */
+            flex: 10;
+        }
+        .gnb{
+            background-color: dodgerblue;
+            /* div.gnb 영역에 대해 1(100%) 전체너비 적용 */
+            
+            flex: 1;
+
+        }
+        @media(max-width:768px){
+            header
+            [
+                /* 반응형 웹 flex 표현을 세로형 방향으로 구현함 */
+                flex-direction: column-row;
+            ]
+        }
+
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="logo">logo</div>
+        <div class="search"><input type="text"><button>검색</button></div>
+        <div class="gnb">gnb</div>
+    </header>
+</body>
+</html>

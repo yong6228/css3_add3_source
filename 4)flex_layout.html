@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>layout</title>
+     <!-- flexbox 레이아웃 : 반응형 모바일 웹에서 스크롤 잃는 100% 레이아웃 구현 예시 -->
+    <style>
+       body{margin: 0;}
+       /* vh=viewport height */
+       height:100vh;}
+       h1,h2,h3,h4,h5,h6{margin: 0;}
+       .container{
+           display: flex;
+           flex-direction: column;
+           height: 100%;
+       }
+
+       header, content1, .navi, .main{padding: 1em;}
+       header  
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h2>Header</h2>
+        </header>
+        <div class="content1">
+            <h2>Banner</h2>
+        </div>
+        <div class="content2">
+            <div class="navi">
+                <h2>Navi</h2>
+            </div>
+            <div class="main">
+                <h2>Main</h2>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                     Voluptatem eligendi quod adipisci ipsa nesciunt excepturi nemo assumenda sit eveniet ad debitis,
+                      voluptatum cumque vel aut minima iusto atque mollitia ratione dignissimos ex repellat! 
+                      Omnis dolores totam facere debitis unde, dolorum repellat saepe in doloremque, aliquid, quos ab blanditiis.
+                       Velit maiores provident, eaque et voluptates soluta excepturi. Consequatur explicabo non perferendis ipsam tempora dicta magni, 
+                       officiis vero sed animi. Incidunt quod provident culpa, eum tenetur laboriosam quaerat tempora assumenda reiciendis?
+                        Tempora provident aperiam praesentium similique earum, nulla deserunt quis deleniti, dicta incidunt voluptatem ratione eum 
+                        eveniet minima cumque inventore saepe voluptates? Maxime vitae esse quam voluptatum pariatur voluptatibus quod suscipit 
+                        consectetur! Debitis, perferendis placeat tenetur officiis ea repudiandae eveniet magni ut magnam, explicabo odit, error quam
+                        . Ipsum aut nemo tempore hic.</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

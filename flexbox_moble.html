@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>flexbox</title>
+    <style>
+        body{
+            margin: 0;
+            background-color: #eee;
+
+        }
+        h1, h2, h3 ,h4 ,h5, h6{
+            margin: 0;
+
+        }
+        section{
+            border: 1px solid red;
+        }
+        section article{
+            padding: 20px;
+
+        }
+        .content1{
+            background-color: yellow;
+
+        }
+        .content2{
+            background-color: pink;
+
+        }
+        .content3{
+            background-color:  greenyellow;
+        }
+        @media(min-width : 1024px){
+            section{
+                display: flex;
+            }
+        }
+
+
+    </style>
+</head>
+<body>
+    <section>
+        <article class="content1">
+            <h2>Content1</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                 Quis ex unde magnam, ipsum molestiae, maxime eligendi laboriosam id natus molestias
+                  necessitatibus inventore excepturi animi quia harum? Molestias odio quas aliquid!</p>
+        </article>
+        <article class="content2">
+            <h2>Content2</h2>
+            <p>Ab itaque earum est harum amet laudantium neque, recusandae
+                 dolore dignissimos, et iste repudiandae quam obcaecati esse qui enim officia cum
+                  impedit sed repellendus eligendi minima nihil repellat cupiditate? Cupiditate.</p>
+        </article>
+        <article class="content3">
+            <h2>Content3</h2>
+            <p>Aut soluta saepe tenetur illum neque maiores
+                ! Mollitia ipsum, at rerum ea praesentium vel fuga minus distinctio eum nesciunt 
+                doloribus iusto quasi asperiores facere nihil eveniet harum corporis officiis tenetur.</p>
+        </article>
+    </section>
+</body>
+</html>
